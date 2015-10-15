@@ -93,3 +93,5 @@ for fasta in referenceProject.fa contigs.fa
 		tblastn -query genesProject.fa -db $fasta -outfmt 7 -out ../results/$fasta.blast.txt
 done
 
+# count the number of contigs 
+grep ">" contigs.fa | wc -l > ../results/contigNumber.txt
